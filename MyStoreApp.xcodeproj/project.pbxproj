@@ -14,6 +14,10 @@
 		015D6E5D1B94A75F005E5590 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 015D6E5C1B94A75F005E5590 /* Images.xcassets */; };
 		015D6E601B94A75F005E5590 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 015D6E5E1B94A75F005E5590 /* LaunchScreen.xib */; };
 		015D6E6C1B94A75F005E5590 /* MyStoreAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 015D6E6B1B94A75F005E5590 /* MyStoreAppTests.m */; };
+		015D6E771B94BAC0005E5590 /* Products.json in Resources */ = {isa = PBXBuildFile; fileRef = 015D6E761B94BAC0005E5590 /* Products.json */; };
+		015D6E7A1B94BBBC005E5590 /* StorePurchaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 015D6E791B94BBBC005E5590 /* StorePurchaseController.m */; };
+		015D6E7D1B94BCCE005E5590 /* PurchasedDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 015D6E7C1B94BCCE005E5590 /* PurchasedDataController.m */; };
+		015D6E801B94C48C005E5590 /* StoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 015D6E7F1B94C48C005E5590 /* StoreViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +44,13 @@
 		015D6E651B94A75F005E5590 /* MyStoreAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyStoreAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		015D6E6A1B94A75F005E5590 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		015D6E6B1B94A75F005E5590 /* MyStoreAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyStoreAppTests.m; sourceTree = "<group>"; };
+		015D6E761B94BAC0005E5590 /* Products.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Products.json; sourceTree = "<group>"; };
+		015D6E781B94BBBC005E5590 /* StorePurchaseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StorePurchaseController.h; sourceTree = "<group>"; };
+		015D6E791B94BBBC005E5590 /* StorePurchaseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StorePurchaseController.m; sourceTree = "<group>"; };
+		015D6E7B1B94BCCE005E5590 /* PurchasedDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PurchasedDataController.h; sourceTree = "<group>"; };
+		015D6E7C1B94BCCE005E5590 /* PurchasedDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PurchasedDataController.m; sourceTree = "<group>"; };
+		015D6E7E1B94C48C005E5590 /* StoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreViewController.h; sourceTree = "<group>"; };
+		015D6E7F1B94C48C005E5590 /* StoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,9 +96,12 @@
 				015D6E541B94A75F005E5590 /* AppDelegate.m */,
 				015D6E561B94A75F005E5590 /* ViewController.h */,
 				015D6E571B94A75F005E5590 /* ViewController.m */,
+				015D6E7E1B94C48C005E5590 /* StoreViewController.h */,
+				015D6E7F1B94C48C005E5590 /* StoreViewController.m */,
 				015D6E591B94A75F005E5590 /* Main.storyboard */,
 				015D6E5C1B94A75F005E5590 /* Images.xcassets */,
 				015D6E5E1B94A75F005E5590 /* LaunchScreen.xib */,
+				015D6E751B94BAB4005E5590 /* IAP */,
 				015D6E4F1B94A75F005E5590 /* Supporting Files */,
 			);
 			path = MyStoreApp;
@@ -117,6 +131,18 @@
 				015D6E6A1B94A75F005E5590 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		015D6E751B94BAB4005E5590 /* IAP */ = {
+			isa = PBXGroup;
+			children = (
+				015D6E781B94BBBC005E5590 /* StorePurchaseController.h */,
+				015D6E791B94BBBC005E5590 /* StorePurchaseController.m */,
+				015D6E7B1B94BCCE005E5590 /* PurchasedDataController.h */,
+				015D6E7C1B94BCCE005E5590 /* PurchasedDataController.m */,
+				015D6E761B94BAC0005E5590 /* Products.json */,
+			);
+			name = IAP;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,6 +226,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				015D6E5B1B94A75F005E5590 /* Main.storyboard in Resources */,
+				015D6E771B94BAC0005E5590 /* Products.json in Resources */,
 				015D6E601B94A75F005E5590 /* LaunchScreen.xib in Resources */,
 				015D6E5D1B94A75F005E5590 /* Images.xcassets in Resources */,
 			);
@@ -219,7 +246,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				015D6E7A1B94BBBC005E5590 /* StorePurchaseController.m in Sources */,
 				015D6E581B94A75F005E5590 /* ViewController.m in Sources */,
+				015D6E801B94C48C005E5590 /* StoreViewController.m in Sources */,
+				015D6E7D1B94BCCE005E5590 /* PurchasedDataController.m in Sources */,
 				015D6E551B94A75F005E5590 /* AppDelegate.m in Sources */,
 				015D6E521B94A75F005E5590 /* main.m in Sources */,
 			);
@@ -352,6 +382,7 @@
 				INFOPLIST_FILE = MyStoreApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -362,6 +393,7 @@
 				INFOPLIST_FILE = MyStoreApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -418,6 +450,7 @@
 				015D6E711B94A75F005E5590 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		015D6E721B94A75F005E5590 /* Build configuration list for PBXNativeTarget "MyStoreAppTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +459,7 @@
 				015D6E741B94A75F005E5590 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
