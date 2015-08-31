@@ -9,7 +9,7 @@
 #import "ViewController.h"
 @import iAd;
 
-@interface ViewController ()
+@interface ViewController () <ADBannerViewDelegate>
 
 @property (strong, nonatomic) ADBannerView *adBannerView;
 
@@ -23,9 +23,27 @@
     
     self.view.backgroundColor = [UIColor purpleColor];
     
-    self.adBannerView = [[ADBannerView alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height - 50, self.adBannerView.frame.size.width, self.adBannerView.frame.size.height)];
+    self.adBannerView = [[ADBannerView alloc] initWithFrame:CGRectMake(0, -50, self.adBannerView.frame.size.width, self.adBannerView.frame.size.height)];
+    self.adBannerView.delegate = self;
     
     [self.view addSubview:self.adBannerView];
+}
+
+#pragma mark - AdBannerView Delegate Methods
+
+- (void)bannerViewDidLoadAd:(ADBannerView *)banner {
+    
+    //where we want the ad to display
+    [UIView animateWithDuration:1.0 animations:^{
+        banner.frame = CGRectMake(0, 0, self.adBannerView.frame.size.width, self.adBannerView.frame.size.height);
+    }];
+}
+
+- (void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error {
+    //where we want the ad to hide
+    [UIView animateWithDuration:1.0 animations:^{
+        banner.frame = CGRectMake(0, -50, banner.frame.size.width, banner.frame.size.height);
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
